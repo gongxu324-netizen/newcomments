@@ -161,14 +161,14 @@ const DATA_SHOW = {
   ]
 };
 
-// 各种可能组合的变体
-const NAMES = ["PP Krit", "PPKrit", "PP KRIT"];
+// 锁定正文名称为唯一的 PP Krit，不使用其他拼写变体
+const NAME_FIXED = "PP Krit";
 const BRANDS_ALL = ["GUCCI", "Gucci", "@GUCCI"];
 const BRANDS_NO_AT = ["GUCCI", "Gucci"];
 const EMOJIS = ["✨", "🖤", "👑", "🔥", "💫", "👏", "🤍", "🌟", "🥂", "❤️‍🔥", "📸"];
 const PUNCTS = [".", "!", " —", "..."];
 
-// X 平台的标语与 Hashtags
+// X 平台的标语与 Hashtags（保留固定格式）
 const TAGS_X = "PP KRIT X GUCCI MFW26\n#GUCCISS27xPPKRIT\n#GucciTheStoreShow\n#Gucci #PPKritt #MFW\n@gucci @ppkritt";
 const LIMIT_X = 280;
 const COUNT = 6;
@@ -188,11 +188,11 @@ function getBrand() {
 }
 
 function fillVars(text) {
-  return text.replace(/\{name\}/g, () => rand(NAMES))
+  return text.replace(/\{name\}/g, NAME_FIXED)
              .replace(/\{brand\}/g, () => getBrand());
 }
 
-// 动态文案生成（保证最前端无 Emoji）
+// 动态文案生成（保证最前端无 Emoji，正文锁定唯一名称 PP Krit）
 function generateText() {
   const isX = mode === "x";
   const matrix = DATA_SHOW;
@@ -239,7 +239,7 @@ function updateStats() {
   const matrix = DATA_SHOW;
   
   const totalCombos = matrix.PRE.length * matrix.SUBJECT.length * matrix.ACTION.length * 
-                      matrix.EVALUATION.length * matrix.TAIL.length * NAMES.length * bCount * EMOJIS.length;
+                      matrix.EVALUATION.length * matrix.TAIL.length * bCount * EMOJIS.length;
 
   document.getElementById("stats").textContent = 
     `🌾 Over ${totalCombos.toLocaleString()} unique randomized variations available!`;
@@ -263,7 +263,7 @@ function render() {
 
     // 高亮关键词
     const highlighted = item.text
-      .replace(/PP Krit|PPKrit|PP KRIT/g, m => `<b>${m}</b>`)
+      .replace(/PP Krit/g, m => `<b>${m}</b>`)
       .replace(/@?GUCCI|Gucci/g, m => `<b>${m}</b>`);
 
     card.innerHTML = `
