@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PP Krit × GUCCI — MFW Compliment Generator</title>
-<!-- 引入可爱圆润的字体库 -->
+<!-- 引入可爱圆润字体 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,8 +12,8 @@
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    /* 柔和米色与浅紫色柔和渐变 */
-    background: linear-gradient(135deg, #EAE3F2 0%, #F6F0EC 50%, #FAF6F0 100%);
+    /* 莫兰迪低饱和灰紫到暖燕麦色渐变 */
+    background: linear-gradient(135deg, #E5E0EB 0%, #EFECE6 50%, #F5F2EC 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -21,97 +21,97 @@
   }
   .container { width: 100%; max-width: 580px; }
   
-  /* 可爱圆润标题样式 */
+  /* 可爱圆润标题（低饱和灰紫） */
   h1 { 
-    color: #7B52AB; 
+    color: #6B5B7B; 
     text-align: center; 
     font-size: 26px; 
     margin-bottom: 8px; 
     font-family: 'Fredoka', 'Quicksand', -apple-system, sans-serif;
     letter-spacing: 0.5px;
-    text-shadow: 1px 1px 0px #fff;
+    text-shadow: 1px 1px 0px #FAF8F5;
   }
   .subtitle { 
-    color: #8E7B9B; 
+    color: #8C7C9C; 
     text-align: center; 
     font-size: 13px; 
     margin-bottom: 22px; 
     line-height: 1.5; 
   }
   
-  /* 选项卡样式 */
+  /* 选项卡样式（燕麦底色与淡紫色边框） */
   .tabs { display: flex; gap: 12px; margin-bottom: 18px; }
   .tab {
     flex: 1; padding: 12px 10px; text-align: center; border-radius: 14px;
-    background: rgba(255, 255, 255, 0.6); color: #7B688A;
+    background: rgba(245, 242, 236, 0.75); color: #7A6B8A;
     font-size: 14px; font-weight: 600; cursor: pointer;
     transition: all .25s ease; border: 2px solid transparent;
-    box-shadow: 0 4px 10px rgba(123, 82, 171, 0.05);
+    box-shadow: 0 4px 10px rgba(107, 91, 123, 0.05);
   }
   .tab.active { 
     background: #FFFFFF; 
-    color: #7B52AB; 
-    border-color: #D3C3E6;
-    box-shadow: 0 6px 14px rgba(123, 82, 171, 0.12);
+    color: #6B5B7B; 
+    border-color: #C8BDD3;
+    box-shadow: 0 6px 14px rgba(107, 91, 123, 0.1);
   }
-  .tab .hash { display: block; font-size: 11px; font-weight: 400; opacity: .8; margin-top: 3px; color: #A08FB3; }
+  .tab .hash { display: block; font-size: 11px; font-weight: 400; opacity: .8; margin-top: 3px; color: #9A8BAA; }
   
-  .stats { color: #8E71AD; text-align: center; font-size: 12.5px; margin-bottom: 16px; font-weight: 500; }
+  .stats { color: #7A698B; text-align: center; font-size: 12.5px; margin-bottom: 16px; font-weight: 500; }
   
-  /* 可爱圆角按钮 */
+  /* 低饱和度灰紫色按钮 */
   .btn {
     display: block; width: 100%; padding: 14px;
-    background: #9D72CE; color: #FFFFFF; font-size: 15px; font-weight: 700;
+    background: #8A739C; color: #FAF8F5; font-size: 15px; font-weight: 700;
     border: none; border-radius: 16px; cursor: pointer;
     font-family: 'Fredoka', sans-serif;
     transition: transform .15s, box-shadow .15s, background .2s; margin-bottom: 18px;
-    box-shadow: 0 6px 16px rgba(157, 114, 206, 0.25);
+    box-shadow: 0 6px 16px rgba(138, 115, 156, 0.25);
   }
   .btn:hover { 
-    background: #8F62C3;
+    background: #7B648D;
     transform: translateY(-2px); 
-    box-shadow: 0 8px 22px rgba(157, 114, 206, 0.35); 
+    box-shadow: 0 8px 22px rgba(138, 115, 156, 0.35); 
   }
   .btn:active { transform: translateY(0); }
   
-  /* 卡片列表 */
+  /* 卡片列表（燕麦乳白纸质感） */
   .card {
-    background: rgba(255, 255, 255, 0.85); border-radius: 16px;
+    background: rgba(250, 247, 242, 0.9); border-radius: 16px;
     padding: 16px 18px; margin-bottom: 12px; cursor: pointer;
     transition: transform .15s, background .2s, box-shadow .2s; position: relative;
-    border: 1px solid rgba(255, 255, 255, 0.9);
-    box-shadow: 0 4px 12px rgba(150, 130, 170, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(120, 110, 130, 0.06);
   }
   .card:hover { 
     transform: translateY(-2px) scale(1.01); 
     background: #FFFFFF; 
-    box-shadow: 0 8px 20px rgba(150, 130, 170, 0.12);
+    box-shadow: 0 8px 20px rgba(120, 110, 130, 0.1);
   }
-  .card .index { font-size: 11px; color: #B0A0C0; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
-  .card .char-count { font-size: 11px; color: #887898; font-weight: 600; }
+  .card .index { font-size: 11px; color: #A898B8; margin-bottom: 6px; display: flex; justify-content: space-between; align-items: center; }
+  .card .char-count { font-size: 11px; color: #8A7B9A; font-weight: 600; }
   .card .tag {
     display: inline-block; font-size: 10px; padding: 2px 8px; border-radius: 8px; margin-left: 6px; font-weight: 600;
   }
-  .tag.short { background: #E8F0FE; color: #4A777A; }
-  .tag.medium { background: #FAF0E6; color: #B87333; }
-  .tag.long { background: #F3E8F5; color: #7B52AB; }
+  .tag.short { background: #E6ECF5; color: #4A6B82; }
+  .tag.medium { background: #F5EBE1; color: #9A6B43; }
+  .tag.long { background: #EBE4F0; color: #6B5B7B; }
   
-  .card .text { font-size: 14.5px; color: #4A3E56; line-height: 1.6; word-break: break-word; white-space: pre-line; }
-  .card .text b { color: #8F62C3; font-weight: 700; }
+  .card .text { font-size: 14.5px; color: #42384C; line-height: 1.6; word-break: break-word; white-space: pre-line; }
+  .card .text b { color: #7B648D; font-weight: 700; }
   
   .card .tip {
     position: absolute; right: 14px; top: 14px;
-    font-size: 11px; color: #9D72CE; opacity: 0; transition: opacity .2s; font-weight: 600;
+    font-size: 11px; color: #8A739C; opacity: 0; transition: opacity .2s; font-weight: 600;
   }
-  .card.copied { background: #F2FAF4; border-color: #D1EAD8; }
-  .card.copied .tip { opacity: 1; color: #52AB6D; }
+  .card.copied { background: #F0F7F2; border-color: #C2E0C8; }
+  .card.copied .tip { opacity: 1; color: #48935C; }
   
   /* 复制提示 Toast */
   .toast {
     position: fixed; bottom: 35px; left: 50%; transform: translateX(-50%) translateY(20px);
-    background: #5E437C; color: #FFF; padding: 10px 24px; border-radius: 20px;
+    background: #524461; color: #FAF8F5; padding: 10px 24px; border-radius: 20px;
     font-size: 13px; opacity: 0; pointer-events: none; transition: all .25s; z-index: 100;
-    box-shadow: 0 6px 18px rgba(94, 67, 124, 0.25);
+    box-shadow: 0 6px 18px rgba(82, 68, 97, 0.25);
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 </style>
@@ -133,22 +133,22 @@
 <div class="toast" id="toast">Copied to Clipboard ✓</div>
 
 <script>
-// ===== 高多样性文案矩阵（防 AI 控评/刷屏检测） =====
+// ===== 高多样性文案矩阵（专为嘉宾/代言人视角打造） =====
 const DATA_SHOW = {
   PRE: [
     "Honestly", "No lies told", "Just look at him", "Fashion week highlight", 
     "Unreal presence", "Style masterclass", "Without a doubt", "Everyone is talking",
     "Absolute perfection", "Pure elegance", "The main character", "Front row excellence",
-    "Beyond stunning", "Effortlessly chic", "Stealing the spot", "Serving pure class"
+    "Beyond stunning", "Effortlessly chic", "Stealing the spotlight", "Serving pure class"
   ],
   SUBJECT: [
     "{name} wearing {brand}", "{name} in full {brand}", "{name} representing {brand}",
     "{name} x {brand} synergy", "the way {name} pulls off {brand}", "{name}'s look for {brand}"
   ],
   ACTION: [
-    "is completely next level", "commands the entire runway scene", "is turning heads everywhere in Milan",
-    "defines modern luxury effortlessly", "stole the whole show in seconds", "looks like a living art piece",
-    "brought pure high-fashion magic", "owns the spotlight completely", "delivers editorial perfection"
+    "is completely next level", "commands the front row effortlessly", "is turning heads everywhere in Milan",
+    "defines modern luxury so naturally", "stole the whole event in seconds", "looks like a high-fashion portrait",
+    "brought pure ambassador magic", "owns the scene with effortless grace", "delivers editorial perfection"
   ],
   EVALUATION: [
     "The poise and expression are unmatched.", "Every single angle is flawless.",
@@ -157,7 +157,7 @@ const DATA_SHOW = {
   ],
   TAIL: [
     "Truly iconic.", "So proud of him!", "A moment for the books.",
-    "Fashion history in the making.", "Unstoppable energy.", "Simply breathtaking."
+    "Fashion history in the making.", "Unstoppable charm.", "Simply breathtaking."
   ]
 };
 
@@ -179,7 +179,7 @@ let mode = "x";
 const rand = arr => arr[Math.floor(Math.random() * arr.length)];
 const maybe = (str, prob = 0.5) => Math.random() < prob ? str : "";
 
-// 插入零宽隐形字符防止同一段落哈希被系统识别为 Bot
+// 插入零宽隐形字符防止同一段落哈希被系统识别为 Bot 控评
 const zeroWidthify = str => str.split("").join(Math.random() < 0.2 ? "\u200B" : "");
 
 function getBrand() {
@@ -192,7 +192,7 @@ function fillVars(text) {
              .replace(/\{brand\}/g, () => getBrand());
 }
 
-// 动态文案生成（最前端绝不出现 Emoji）
+// 动态文案生成（保证最前端无 Emoji）
 function generateText() {
   const isX = mode === "x";
   const matrix = DATA_SHOW;
@@ -201,7 +201,7 @@ function generateText() {
   let rawSentence = "";
   let tagType = "medium";
 
-  // 注意：此处保证开头的 PRE / SUBJECT 前面绝对没有任何 Emoji
+  // 保证开头的句子前绝对不添加任何 Emoji
   if (shortProb < 0.35) {
     // 简短句式
     tagType = "short";
@@ -218,7 +218,7 @@ function generateText() {
 
   let text = fillVars(rawSentence).trim();
 
-  // X 字符限制逻辑
+  // X 字符数截断/保障机制
   if (isX) {
     const totalLen = text.length + 2 + TAGS_X.length;
     if (totalLen > LIMIT_X) {
@@ -227,13 +227,13 @@ function generateText() {
     text = text + "\n\n" + TAGS_X;
   }
 
-  // 写入隐形抗 AI 检测字符
+  // 写入防 AI 控评检测零宽字符
   text = zeroWidthify(text);
 
   return { text, tag: tagType };
 }
 
-// 计算当前模式下的组合数
+// 计算当前模式下的总组合数
 function updateStats() {
   const bCount = (mode === "ig") ? 2 : 3;
   const matrix = DATA_SHOW;
@@ -242,7 +242,7 @@ function updateStats() {
                       matrix.EVALUATION.length * matrix.TAIL.length * NAMES.length * bCount * EMOJIS.length;
 
   document.getElementById("stats").textContent = 
-    `🌸 Over ${totalCombos.toLocaleString()} unique randomized variations available!`;
+    `🌾 Over ${totalCombos.toLocaleString()} unique randomized variations available!`;
 }
 
 // 渲染 6 张卡片
@@ -280,7 +280,7 @@ function render() {
   }
 }
 
-// 复制功能
+// 一键复制
 async function copyText(text, card) {
   const cleanText = text.replace(/\u200B/g, "");
   try {
@@ -302,7 +302,7 @@ async function copyText(text, card) {
   }, 1500);
 }
 
-// 绑定事件
+// 事件监听
 document.getElementById("refreshBtn").addEventListener("click", render);
 
 document.querySelectorAll(".tab").forEach(tab => {
